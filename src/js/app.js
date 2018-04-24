@@ -14,7 +14,7 @@
   /*
   * Add deck sizes to select
   */
-  function selectDeckSizeOptiones(min, max) {
+  function selectDeckSizeOptions(min, max) {
     deckSize = max;
 
     let numberOfDeckSizes = [];
@@ -32,7 +32,7 @@
     selectDeckSize.innerHTML = deckSizesOptions;
   }
 
-  selectDeckSizeOptiones(6, 20);
+  selectDeckSizeOptions(6, 20);
 
   selectDeckSize.addEventListener('change', function(event) {
     deckSize = event.target.value;
@@ -89,7 +89,7 @@
       numberOfClicks = 0;
     }
 
-    
+
 
     if(target.classList.contains('hide')) {
       target.classList.remove('hide');
