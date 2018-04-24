@@ -20,7 +20,7 @@
 
     let numberOfDeckSizes = [];
 
-    for (let i = 20; i >= 6; i-=2) {
+    for (let i = max; i >= min; i-=2) {
       numberOfDeckSizes.push(i);
     }
 
