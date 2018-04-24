@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Superchareg Memory Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="build/css/styles.css" type="text/css" media="screen">
+</head>
+  <div class="site"></div>
+    <header class="header px-4">
+      <div class="row">
+        <div class="col-sm-3 header__logo">
+          <img src="./src/assets/supercharge-logo.svg" alt="Supercharge" />
+          <div class="ml-4">Memory game</div>
+        </div>
+        <div class="col-sm-6 header__middle">
+          <div class="mr-2">Deck size</div>
+          <select name="select-deck-size" id="select-deck-size" class="mr-2"></select>
+          <button id="start-new-game" class="btn btn-danger">
+            Start new game
+          </button>
+        </div>
+        <div class="col-sm-3 header__hightscores">
+          Hightscores
+        </div>
+      </div>
+    </header>
+    <div class="container px-xl-6">
+      <div id="board-header" class="board-header py-4">
+        <div class="row">
+          <div class="col-sm-4">
+            Current tries: <span id="current-tries">0</span>
+          </div>
+          <div class="col-sm-4 text-center">
+            Best:<br />
+            <span id="best">0</span>
+          </div>
+          <div class="col-sm-4 text-right">
+            <button class="btn btn-empty text-uppercase">
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="board" class="board row">
+
+      </div>
+    </div>
+  </div>
+<script src="build/js/jquery.min.js"></script>
+<script src="build/js/popper.min.js"></script>
+<script src="build/js/bootstrap.min.js"></script>
+<script src="build/js/skrollr.min.js"></script>
+<script src="build/js/app.js"></script>
+</body>
+</html>

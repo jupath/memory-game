@@ -1,0 +1,39 @@
+.header {
+  background-color: black;
+  box-shadow: 0 4px 15px -5px #555;
+  color: white;
+  > .row {
+    height: 65px;
+  }
+}
+
+.header__logo {
+  align-items: center;
+  display: flex;
+  text-transform: uppercase;
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.header__middle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  > .btn {
+    text-transform: uppercase;
+  }
+
+  select {
+    border-radius: .25rem;
+    height: 38px;
+    width: 60px;
+  }
+}
+
+.header__hightscores {
+  line-height: 65px;
+  text-align: right;
+  text-transform: uppercase;
+}
