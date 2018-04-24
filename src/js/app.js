@@ -10,6 +10,7 @@
   const selectDeckSize = document.getElementById('select-deck-size');
   const startNewGame = document.getElementById('start-new-game');
   const board = document.getElementById('board');
+  let boardItems;
 
   /*
   * Add deck sizes to select
@@ -51,6 +52,8 @@
     }).join('');
 
     board.innerHTML = cardsHtml;
+
+    boardItems = document.querySelectorAll('.board__item');
   }
 
   function shuffelCards() {
@@ -83,17 +86,21 @@
   board.addEventListener('click', function(event) {
     const target = event.target;
 
-    numberOfClicks++;
-
     if (numberOfClicks === 2) {
       numberOfClicks = 0;
-    }
 
-
-
-    if(target.classList.contains('hide')) {
+      for (let i = 0; i < boardItems.length; ++i) {
+        if(!boardItems[i].classList.contains('hide')) {
+          boardItems[i].classList.add('hide');
+        }
+      }
+      target.classList.remove('hide');
+      numberOfClicks++;
+    } else {
+      numberOfClicks++;
       target.classList.remove('hide');
     }
+
   });
 
 }());
